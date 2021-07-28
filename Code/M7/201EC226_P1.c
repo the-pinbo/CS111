@@ -33,7 +33,8 @@ void displayCount(int *count)
     printf("Char : Count\n");
     for (size_t i = 0; i < COUNT_SIZE; i++)
     {
-        printf("%c : %d\n", i, *(count + i));
+        if(*(count + i))
+            printf("%c : %d\n", i, *(count + i));
     }
 }
 

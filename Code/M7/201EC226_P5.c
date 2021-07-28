@@ -1,4 +1,4 @@
-// Lab 5 Questin 6
+// Lab 5 Questin 5
 // Inbasekaran.P 201EC226
 /*Write a program to display the greatest of N numbers –use malloc() function*/
 
@@ -6,6 +6,7 @@
 #include <stdio.h>
 // Including stdlib for system("clear") to clear the screen in the terminal.
 #include <stdlib.h>
+#include<limits.h>
 
 int main()
 {
@@ -14,27 +15,26 @@ int main()
     int n;
     printf("Enter the total number of elements: ");
     scanf("%d", &n);
-    int *data = (int *)malloc(n, sizeof(int));
+    int *data = (int *)malloc(n * sizeof(int));
     if (data == NULL)
     {
         printf("Error!!! memory not allocated.");
         exit(0);
     }
-    // Storing numbers entered by the user.
     for (int i = 0; i < n; ++i)
     {
-        printf("Enter number%d: ", i++);
-        scanf("%d", data++);
+        printf("Enter number%d: ", i + 1);
+        scanf("%d", (data + i));
     }
-    // Finding the largest number
+    int max = INT_MIN;
     for (int i = 1; i < n; ++i)
     {
-        if (*data < *(data + i))
+        if (max < *(data + i))
         {
-            *data = *(data + i);
+            max = *(data + i);
         }
     }
-    printf("Largest number = %d", *data);
+    printf("Largest number is= %d", max);
     free(data);
     return 0;
 }

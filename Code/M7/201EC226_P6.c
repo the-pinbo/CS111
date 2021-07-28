@@ -82,9 +82,9 @@ int len(char **list)
 void sortList(char **list)
 {
     int n = len(list);
-    for (size_t i = 0; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        for (int j = i; j < n - 1; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
             if (list[j][0] > list[j + 1][0])
             {
@@ -93,11 +93,11 @@ void sortList(char **list)
             else if (list[j][0] == list[j + 1][0])
             {
                 int k = 1;
-                while (list[j][k] != list[j + 1][k] && (list[j][k] != '\0' || list[j + 1][k] != '\0'))
+                while (list[j][k] == list[j + 1][k] && (list[j][k] != '\0' && list[j + 1][k] != '\0'))
                 {
                     k++;
                 }
-                if (list[j][0] > list[j + 1][0])
+                if (list[j][k] > list[j + 1][k])
                 {
                     swap(&list[j], &list[j + 1]);
                 }
