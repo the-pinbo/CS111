@@ -87,12 +87,10 @@ void switch_case(int choice)
         // input the string
         inputStr(string2);
         int n = comparison(string1, string2);
-        if (n == 1)
-            printf("%s is larger\n", string1);
-        else if (n == -1)
-            printf("%s is larger\n", string2);
-        else
+        if (n == 0)
             printf("Same Strings\n");
+        else
+            printf("Different Strings\n");
         break;
     }
     case 3:
@@ -164,15 +162,14 @@ char *concatenate(char *string1, char *string2)
 
 int comparison(char *string1, char *string2)
 {
-    int i = 0;
-    while (string1[i++] && string2[i++])
-        ;
-    if (string1[i])
-        return 1;
-    else if (string2[i])
-        return -1;
-    else
-        return 0;
+    for (int i = 0; string1[i] && string2[i]; ++i)
+    {
+        if (string1[i] > string2[i])
+            return 1;
+        else if (string1[i] < string2[i])
+            return -1;
+    }
+    return 0;
 }
 
 char *copy(char *string)
