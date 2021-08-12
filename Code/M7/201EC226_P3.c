@@ -33,5 +33,6 @@ int main()
     int r = input();
     printf("The area is: %lf\n", area(&r));
     printf("The circumference is: %lf\n", circumference(&r));
+    system("pause");
     return 0;
 }

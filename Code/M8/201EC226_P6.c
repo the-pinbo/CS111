@@ -34,5 +34,6 @@ int main()
     // To clear the console.
     system("clear");
     printf("The number of lines in the file is %d.\n", lines("DATA2.txt"));
+    system("pause");
     return 0;
 }

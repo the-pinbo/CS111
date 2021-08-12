@@ -7,7 +7,6 @@
 // Including stdlib for system("clear") to clear the screen in the terminal.
 #include <stdlib.h>
 
-
 long long eval(int x, int n)
 {
     long long y = x;
@@ -18,18 +17,18 @@ long long eval(int x, int n)
         y += xi;
     }
     return y;
-
 }
 
 int main()
 {
     // To clear the console.
     system("clear");
-    // input  
+    // input
     printf("Enter the value of x and n (n>0): ");
-    int x,n;
-    scanf("%d %d",&x,&n);
-    long long y = eval(x,n);
+    int x, n;
+    scanf("%d %d", &x, &n);
+    long long y = eval(x, n);
     printf("The value of y is : %lld\n", y);
+    system("pause");
     return 0;
 }

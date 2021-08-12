@@ -205,5 +205,6 @@ char *reverse(char *string)
     {
         swap(&string[i++], &string[j--]);
     }
+    system("pause");
     return string;
 }

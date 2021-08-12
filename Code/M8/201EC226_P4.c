@@ -72,5 +72,6 @@ int main()
     // To clear the console.
     system("clear");
     append("Data.txt", "DATA2.txt");
+    system("pause");
     return 0;
 }

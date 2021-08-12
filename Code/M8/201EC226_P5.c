@@ -30,5 +30,6 @@ int main()
     // To clear the console.
     system("clear");
     printf("The size of the file in bytes is %d", size("Data.txt"));
+    system("pause");
     return 0;
 }

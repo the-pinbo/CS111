@@ -6,9 +6,9 @@
 #include <stdio.h>
 // Including stdlib for system("clear") to clear the screen in the terminal.
 #include <stdlib.h>
-// To include bool data type. 
+// To include bool data type.
 #include <stdbool.h>
- 
+
 bool checkYear(int year)
 {
     // If a year is multiple of 400,
@@ -19,16 +19,17 @@ bool checkYear(int year)
         return true;
     return false;
 }
- 
+
 int main()
 {
-    
+
     // To clear the console.
     system("clear");
-    // input  
+    // input
     int year = 2000;
     printf("Enter the year: ");
-    scanf("%d",&year);
-    checkYear(year)? printf("Leap Year"):printf("Not a Leap Year");
+    scanf("%d", &year);
+    checkYear(year) ? printf("Leap Year") : printf("Not a Leap Year");
+    system("pause");
     return 0;
 }

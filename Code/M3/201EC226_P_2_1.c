@@ -6,25 +6,25 @@
 // Including stdlib for system("clear") to clear the screen in the terminal.
 #include <stdlib.h>
 
-
 int main()
 {
     // To clear the console.
     system("clear");
     printf("Enter the number: ");
     int number;
-    scanf("%d",&number);
+    scanf("%d", &number);
     int rnumber = 0;
     int sum = 0;
     while (number)
     {
         rnumber *= 10;
-        int n = number%10;
+        int n = number % 10;
         rnumber += n;
         sum += n;
         number /= 10;
     }
-    printf("The reversed number is %d.\n",rnumber);
-    printf("The sum of the digits is %d.\n",sum);
+    printf("The reversed number is %d.\n", rnumber);
+    printf("The sum of the digits is %d.\n", sum);
+    system("pause");
     return 0;
 }

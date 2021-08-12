@@ -76,5 +76,6 @@ int main()
     inputStr(string);
     write(string, "Data.txt");
     read("Data.txt");
+    system("pause");
     return 0;
 }

@@ -6,7 +6,7 @@
 #include <stdio.h>
 // Including stdlib for system("clear") to clear the screen in the terminal.
 #include <stdlib.h>
-#include<limits.h>
+#include <limits.h>
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
     if (data == NULL)
     {
         printf("Error!!! memory not allocated.");
-        exit(0);
+        exit(EXIT_FAILURE);
     }
     for (int i = 0; i < n; ++i)
     {
@@ -36,5 +36,6 @@ int main()
     }
     printf("Largest number is= %d", max);
     free(data);
+    system("pause");
     return 0;
 }

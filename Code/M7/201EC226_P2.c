@@ -39,5 +39,6 @@ int main()
     swap(&a, &b);
     dispaly(a);
     dispaly(b);
+    system("pause");
     return 0;
 }

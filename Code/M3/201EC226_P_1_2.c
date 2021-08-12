@@ -19,8 +19,8 @@ int main()
     double D = b * b - 4 * a * c;
     double alpha, beta, x, iy;
 
-    // real and unique roots 
-    if (D > 0) 
+    // real and unique roots
+    if (D > 0)
     {
         alpha = (-b + sqrt(D)) / (2 * a);
         beta = (-b - sqrt(D)) / (2 * a);
@@ -28,19 +28,19 @@ int main()
     }
 
     // real and equal roots
-    else if (D == 0) 
+    else if (D == 0)
     {
         alpha = beta = -b / (2 * a);
         printf("root1 = root2 = %.2lf", alpha);
     }
 
-    // complex roots 
-    else 
+    // complex roots
+    else
     {
         x = -b / (2 * a);
         iy = sqrt(-D) / (2 * a);
         printf("root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi", x, iy, x, iy);
     }
-    
+    system("pause");
     return 0;
 }

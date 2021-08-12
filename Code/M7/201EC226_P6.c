@@ -20,7 +20,7 @@ char *inputName()
     if (string == NULL)
     {
         printf("Error!!! memory not allocated.");
-        exit(0);
+        exit(EXIT_FAILURE);
     }
     memset(string, 0, n * sizeof(char) + 1);
     fflush(stdin);
@@ -111,5 +111,6 @@ int main()
     char **list = nameList();
     sortList(list);
     displayList(list);
+    system("pause");
     return 0;
 }

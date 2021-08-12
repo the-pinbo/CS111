@@ -66,5 +66,6 @@ int main()
     system("clear");
     read("Data.txt");
     copy("Data.txt", "copy.txt");
+    system("pause");
     return 0;
 }

@@ -149,6 +149,8 @@ void switch_case(int choice)
 
 int main()
 {
+    system("clear");
     switch_case(menu());
+    system("pause");
     return 0;
 }

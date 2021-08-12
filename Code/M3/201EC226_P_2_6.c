@@ -14,19 +14,20 @@ int main()
     system("clear");
     int n;
     printf("Enter the number of terms: ");
-    scanf("%d",&n);
+    scanf("%d", &n);
     float x;
     printf("Enter the value of x: ");
     scanf("%f", &x);
     float num = 1;
     float den = 1;
     double sum = 1;
-    for(int i = 1; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         num *= x;
         den *= i;
-        sum += num/den;
+        sum += num / den;
     }
     printf("The sum of teh series %lf.", sum);
+    system("pause");
     return 0;
 }

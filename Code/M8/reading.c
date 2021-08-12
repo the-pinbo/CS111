@@ -49,5 +49,6 @@ int oneLine()
 int main()
 {
   oneLine();
+  system("pause");
   return 0;
 }

@@ -27,8 +27,9 @@ int main()
     system("clear");
     printf("Enter the value of n: ");
     int n;
-    scanf("%d",&n);
+    scanf("%d", &n);
     long long y = fib(n);
     printf("The value of fib(n) is : %lld\n", y);
+    system("pause");
     return 0;
 }

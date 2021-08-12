@@ -74,5 +74,6 @@ int main()
     read("ODD.txt");
     printf("\n\nContents of EVEN file\n\n");
     read("EVEN.txt");
+    system("pause");
     return 0;
 }

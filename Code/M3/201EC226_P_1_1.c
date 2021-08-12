@@ -7,17 +7,16 @@ special character.*/
 // Including stdlib for system("clear") to clear the screen in the terminal.
 #include <stdlib.h>
 
-
 int main()
 {
     // To clear the console.
     system("clear");
-    
+
     printf("Enter the character: ");
     char ch;
     scanf("%c", &ch);
 
-    if(ch >= 'a' && ch <= 'z')
+    if (ch >= 'a' && ch <= 'z')
     {
         printf("The character is lower case letter.\n");
     }
@@ -29,10 +28,10 @@ int main()
     {
         printf("The character is a digit.\n");
     }
-    else 
+    else
     {
         printf("The character is a special character.\n");
     }
-
+    system("pause");
     return 0;
 }

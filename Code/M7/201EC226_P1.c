@@ -17,7 +17,7 @@ int *countChar(char *string)
     if (count == NULL)
     {
         printf("Error!!! memory not allocated.");
-        exit(0);
+        exit(EXIT_FAILURE);
     }
     memset(count, 0, COUNT_SIZE * sizeof(int));
     while (*string)
@@ -33,7 +33,7 @@ void displayCount(int *count)
     printf("Char : Count\n");
     for (size_t i = 0; i < COUNT_SIZE; i++)
     {
-        if(*(count + i))
+        if (*(count + i))
             printf("%c : %d\n", i, *(count + i));
     }
 }
@@ -56,5 +56,6 @@ int main()
     int *count = countChar(string);
     displayCount(count);
     free(count);
+    system("pause");
     return 0;
 }

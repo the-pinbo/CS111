@@ -31,5 +31,6 @@ int main()
     double ci = amount - p;
     // Print compound intrest
     printf("Compound interest = %lf\n", ci);
+    system("pause");
     return 0;
 }
